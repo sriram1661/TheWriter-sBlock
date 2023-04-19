@@ -1,14 +1,17 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Articles</h1>
-
-<div id="articles">
-  <% @articles.each do |article| %>
-    <%= render article %>
-    <p>
-      <%= link_to "Show this article", article %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New article", new_article_path %>
+<h1>List of Articles</h1>
+<%= link_to "Create Article", new_article_path %>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+    </tr>
+    <% @article.each do |data|%>
+        <tr>
+            <td><%= data.title %></td>
+            <td><%= data.description %></td>
+            <td><%= link_to "View", article_path(data)%></td>
+            <td><%= link_to "Edit", edit_article_path(data)%></td>
+            <td><%= link_to "Delete", article_path(data), method: :delete %></td>
+        </tr>
+    <% end %>
+</table>

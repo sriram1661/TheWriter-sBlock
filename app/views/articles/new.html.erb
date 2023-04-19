@@ -1,9 +1,5 @@
-<h1>New article</h1>
+<h1>Create an Article</h1>
 
-<%= render "form", article: @article %>
+<%= link_to "Show list of articles", articles_path%>
 
-<br>
-
-<div>
-  <%= link_to "Back to articles", articles_path %>
-</div>
+<%= render 'form' %>
