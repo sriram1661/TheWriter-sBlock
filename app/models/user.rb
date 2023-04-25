@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-  include ActiveModel::SecurePasswordw
   has_many :article
   before_save { self.email = email.downcase }
   validates :name, presence: true, uniqueness: {case_sensitive: false}

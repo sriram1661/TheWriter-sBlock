@@ -10,5 +10,9 @@ Rails.application.routes.draw do
 
   #Articles
   resources :articles
-  
+
+  #Users
+  get "signin", to: "user#login", as: "user_signin"
+  get "signup", to: "user#signup", as: "user_signup"
+  post "signup", to: "user#create"
 end

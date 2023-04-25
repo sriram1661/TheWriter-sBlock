@@ -1,5 +1,4 @@
 <h1>List of Articles</h1>
-<%= link_to "Create Article", new_article_path %>
 <table>
     <tr>
         <th>Title</th>
@@ -9,9 +8,9 @@
         <tr>
             <td><%= data.title %></td>
             <td><%= data.description %></td>
-            <td><%= link_to "View", article_path(data)%></td>
+            <td><%= link_to "View", article_path(data), method: :get%></td>
             <td><%= link_to "Edit", edit_article_path(data)%></td>
-            <td><%= link_to "Delete", article_path(data), method: :delete %></td>
+            <td><%= link_to "Delete", article_path(data), data: {"turbo-method": :delete} %></td>
         </tr>
     <% end %>
 </table>

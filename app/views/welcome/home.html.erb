@@ -1,4 +1,8 @@
-<h1>Welcome to home page!</h1>
 
-<%= link_to "About page", about_path %>
-
+<div class="container">
+    <div class="jumbotron">
+    <h1>Welcome to The Writer's Block!</h1>
+    <p><%= link_to "Log in", user_signin_path, class: "btn btn-primary btn-lg", role: "button" %></p>
+    <p><%= link_to "Sign up", user_signup_path, class: "btn btn-primary btn-lg", role: "button" %></p>
+    </div>
+</div>
